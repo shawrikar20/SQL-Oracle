@@ -1,0 +1,6 @@
+SELECT employee_id,slary FROM employees WHERE job_id='SA_MAN'; --where clause to return limited data under a constraint
+SELECT* FROM employees WHERE salary>15000; --arithmetic operations
+SELECT* FROM employees WHERE manager_id<>100; --not equal to
+SELECT employee_id,salary,first_name FROM employees WHERE employee_id IN(100,200,210,211); --in operator always retuurns in specified order
+SELECT employee_id,salary,first_name FROM employees WHERE first_name_id IN('SHUBHAM', 'SHAWRIKAR'); --in operator always retuurns in specified order
+SELECT* FROM employees WHERE salary LIKE 15000; --arithmetic operations
