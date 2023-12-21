@@ -3,4 +3,16 @@ SELECT* FROM employees WHERE salary>15000; --arithmetic operations
 SELECT* FROM employees WHERE manager_id<>100; --not equal to
 SELECT employee_id,salary,first_name FROM employees WHERE employee_id IN(100,200,210,211); --in operator always retuurns in specified order
 SELECT employee_id,salary,first_name FROM employees WHERE first_name_id IN('SHUBHAM', 'SHAWRIKAR'); --in operator always retuurns in specified order
-SELECT* FROM employees WHERE salary LIKE 15000; --arithmetic operations
+SELECT* FROM employees WHERE salary LIKE 15000; --LIKE OPERATOR
+SELECT* FROM employees WHERE first_name LIKE 'A%'; 
+--percentage is wilcard and is used to find likewise things in table
+--%A--first name ends with A
+--A% first_name ends with A
+SELECT* FROM employees WHERE first_name LIKE '_r%';
+--underscore wildcard
+--_r% states that first name which starts with any character and has r at second position and then any number of characters
+SELECT* FROM employees WHERE commission_pct IS NULL; --returns the rows which has commission_pct as NULL
+--here =NULL will not work as it is not same as IS NULL
+SELECT* FROM employees WHERE job_id='SA_MAN' AND salary>10000; --and operator means both the conditions should be true
+SELECT* FROM employees WHERE job_id='SA_MAN' OR salary>10000; --or operator means any one condition can be true
+SELECT* FROM employees WHERE salary>15000 AND job_id NOT IN ('SA_MAN','SA_REP');--not operator used to remove the given conditions
