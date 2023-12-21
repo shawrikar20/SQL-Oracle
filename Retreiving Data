@@ -1,0 +1,16 @@
+DESCRIBE enployees; --used to describe the employee table
+INFORMATION employees; --more information of the table than describe command
+INFO departments; --same as information in short
+INFO+ employees; --more information than info command such has high and low value, dstinct value and histogram
+SELECT* FROM employees; --select all the columns of the table and retreive them
+SELECT column_name FROM departments; --retreive speciffic columns from the database
+SELECT first_name AS name; --ALIAS
+SELECT first_name "My Name" --ALIAS with spaces used to be in quotation marks
+SELECT* FROM dual; --creates a dummy column or table not relatable to database
+SELECT 'my name is shubham' as 'output' FROM dual; --to display a specific output in the dummy column
+SELECT q'[my name is shubham]' as 'output' FROM dual; --to display a specific output in the dummy column without any error
+SELECT distinct job_id FROM employees; --removes all the duplicate rows and return rows with dsitinct ids
+SELECT unique job_id FROM employees; --same as distinct (synonym)
+SELECT first_name || ' ' || last_name AS Full_Name FROM employees; --concatenation first and last name
+SELECT street_addr || ',' || pin_code || ',' || city AS Address FROM location_id; --conactenate the full address
+SELECT employee_id , salary , salary*12 AS annual_salary; --arithmatic expressions used by precedence of BODMAS using parenthesis
