@@ -5,7 +5,7 @@ INFO+ employees; --more information than info command such has high and low valu
 SELECT* FROM employees; --select all the columns of the table and retreive them
 SELECT column_name FROM departments; --retreive speciffic columns from the database
 SELECT first_name AS name; --ALIAS
-SELECT first_name "My Name" --ALIAS with spaces used to be in quotation marks
+SELECT first_name "My Name"; --ALIAS with spaces used to be in quotation marks
 SELECT* FROM dual; --creates a dummy column or table not relatable to database
 SELECT 'my name is shubham' as 'output' FROM dual; --to display a specific output in the dummy column
 SELECT q'[my name is shubham]' as 'output' FROM dual; --to display a specific output in the dummy column without any error
